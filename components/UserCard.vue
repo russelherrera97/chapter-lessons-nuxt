@@ -15,7 +15,7 @@
 
 <script setup>
 const user = useSupabaseUser()
-
+const { auth } = useSupabaseClient()
 const logout = async () => {
   const { error } = await auth.signOut()
 
